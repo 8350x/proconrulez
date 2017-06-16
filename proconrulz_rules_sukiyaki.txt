@@ -1,0 +1,231 @@
+#####################################################
+#  Server !rules messages
+#####################################################
+
+On Say;Text !rules
+    Say Do not say "fuck" or "cao ni ma"
+    Say ESL Rule
+    Say -------------------Allowed Weapons--------------------------------------------
+    Say ARÅÅAK-12,M416,SAR-21,AEK-971,AUG A3,M16A3,CZ-805,QBZ-95-1,ACE 23
+    Say CRÅÅAK 5C,ACW-R,SG553,AKU-12,A-91,G36C,M4,ACE 21 CQB,TYPE-95B-1
+    Say PDW=MX4,PP-2000,UMP-45,CBJ-MS,PDW-R,CZ-3A1,JS2,P90,UMP-9
+    Say LMG=U-100 MK5,TYPE 88 LMG,LSAT,PKP PECHENEG,QBB-95-1,M240B,MG4,M249,RPK-12
+    Say SR=CS-LR4,M40A5,SCOUT ELITE,SV-98,JNG-90,338-RECON,M98B,SRR-61,FY-JS
+    Say HG=P226,M9,QSZ-92,MP443,G18,FN57,M1911,93R,CZ-75,.44 MAGUNAM,COMPACT45,M412 REX
+    Say ------------------------------------------------------------------------------
+    
+
+On Spawn;ServerFirst;Set %kickcount[%p%]% 0
+
+On Spawn;ServerFirst;Set %bancount[%p%]% 0
+
+
+On Say;Text fuck
+    
+    Say fuck %p% 
+    Yell %p% is noob.
+    Say fuck %p% 
+    Yell %p% is noob.
+    Say fuck %p% 
+    Yell %p% is noob.
+    Say fuck %p% 
+    Yell %p% is noob.
+    Say fuck %p% 
+    Yell %p% is noob.
+    
+    Kill 1
+
+On Say;Text TargetPlayer;noob
+	Say %t% is noob!!!
+	
+
+On Say;Text noob
+    Say %p% is noob.
+    Say %p% is noob.
+    Say %p% is noob.
+    Say %p% is noob.
+    Say %p% is noob.
+  	Yell %p% is noob.
+
+
+On Say;Text !k
+	Kill 1
+
+On Spawn;PlayerOnce;PlayerSay ESL rule Server !!!!!!
+
+On Spawn;PlayerOnce;PlayerSay TEAMSPEAK IP: 8350x.net PW: welcome
+On Spawn;PlayerOnce;PlayerSay Do not resist admin !! If you say "fuck admin" you will be...
+
+On Spawn;PlayerOnce;PlayerYell ESL rule. Do not say "fuck admin".
+
+On Kill; Weapon dlSHTR,EODBot,U_Repairtool,RoadKill,DamageArea,SoldierCollision;
+    Say %v% is noob ???
+    Yell %v% is nooooooooooob !!!
+
+On Kill; Weapon U_Defib;
+	Say %v% is noob ??? %v% was kill by AED !!! 
+	Yell %v% is noooooooooob !!!!
+
+On Kill; Damage U_Knife;
+    Say %v% is noob ???
+    Yell %v% is nooooooooooob !!!
+
+On kill; Weapon Melee
+    Say %v% is noob 
+    Say %v% was kill by %p%'s knife lol
+    Yell %v% is noooooooooooooooooob !!! 
+
+On Say;Text sine
+	Say sine cosine tangent ??
+	Say Lets study math !!
+	Yell sine cosine tangent
+
+
+On Say;Text !;TargetPlayer;
+Exec admin.killPlayer %t%
+
+
+On Kill;
+
+# Additional Trigger
++Not Weapon Damagearea
++Not Weapon SoldierCollision
++Not Weapon Death
++Not Weapon Melee
+
+# Allowed Assault Rifles
+#+Not Weapon U_SCARH
++Not Weapon U_M416
++Not Weapon U_SAR21
++Not Weapon U_AEK971
++Not Weapon U_SteyrAug
++Not Weapon U_M16A4
++Not Weapon U_CZ805
++Not Weapon U_AK12
++Not Weapon U_AN94
++Not Weapon U_GalilACE23
++Not Weapon U_QBZ951
++Not Weapon U_L85A2
+
+# Allowed Carbines
++Not Weapon U_ACR
++Not Weapon U_SG553LB
++Not Weapon U_AKU12
++Not Weapon U_A91
++Not Weapon U_G36C
++Not Weapon U_M4A1
++Not Weapon U_GalilACE
++Not Weapon U_Type95B
++Not Weapon U_Groza-1
++Not Weapon U_AK5C
++Not Weapon dlSHTR
+
+# Allowed Shotguns
+# none
+
+# Allowed LMGs
++Not Weapon U_LSAT
++Not Weapon U_Pecheneg
++Not Weapon U_QBB95
++Not Weapon U_M240
++Not Weapon U_MG4
++Not Weapon U_Ultimax
++Not Weapon U_M249
++Not Weapon U_RPK12
++Not Weapon U_L86A1
+
+# Allowed PDWs
++Not Weapon U_PP2000
++Not Weapon U_UMP45
++Not Weapon U_CBJ-MS
++Not Weapon U_MagpulPDR
+#+Not Weapon U_Scorpion
++Not Weapon U_JS2
++Not Weapon U_Groza-4
++Not Weapon U_MX4
++Not Weapon U_P90
++Not Weapon U_UMP9
+
+# Allowed DMRs
++Not Weapon U_MK11
++Not Weapon U_SKS
++Not Weapon U_SVD12
++Not Weapon U_QBU88
++Not Weapon U_M39EBR
++Not Weapon U_GalilACE53
++Not Weapon U_SCAR-HSV
++Not Weapon U_RFB
+
+# Allowed Sniper Rifles
++Not Weapon U_M40A5
++Not Weapon U_Scout
++Not Weapon U_SV98
++Not Weapon U_JNG90
++Not Weapon U_SR338
++Not Weapon U_M98B
++Not Weapon U_M200
++Not Weapon U_CS-LR4
++Not Weapon U_FY-JS
+
+# Allowed Pistols
++Not Weapon U_M9
++Not Weapon U_QSZ92
++Not Weapon U_MP443
++Not Weapon U_Glock18
++Not Weapon U_FN57
++Not Weapon U_M1911
++Not Weapon U_M93R
++Not Weapon U_CZ75
++Not Weapon U_Taurus44
++Not Weapon U_HK45C
++Not Weapon U_P226
++Not Weapon U_SaddlegunSnp
++Not Weapon U_MP412Rex
+
+# Allowed Hand Grenades
++Not Weapon U_M34
++Not Weapon U_M67
+
+# Allowed Gadgets
++Not Weapon U_Repairtool
++Not Weapon U_XM25_Smoke
++Not Weapon EODBot
++Not Weapon U_PortableMedicpack
++Not Weapon U_Medkit
++Not Weapon U_Defib
+
+# Allowed Explosives/Rockets
++Not Weapon U_RPG7
++Not Weapon U_SMAW
++Not Weapon U_SRAW
++Not Weapon U_NLAW
++Not Weapon U_FGM148
+
++say %p% used forbidden weapon %w% to kill 
++PlayerSay ESL rule server !!
++Kill 1
+
+
+
+
+On Say;Text !deathnote; TargetPlayer;
+Exec admin.killPlayer %t%
+
+On Say;Text !votekick; TargetPlayer;If %kickcount[%t%]% != 3; Incr %kickcount[%t%]%; Say %kickcount[%t%]% players want to kick %t%. 
+
+On Say;Text !votekick; TargetPlayer;If %kickcount[%t%]% == 3; Exec admin.kickPlayer %t%
+
+#On Say;Text !voteban; TargetPlayer;If %bancount[%t%]% != 3; Incr %bancount[%t%]%; Say %bancount[%t%]% players want to ban %t%. 
+
+#On Say;Text !voteban; TargetPlayer;If %bancount[%t%]% == 3; Exec banList.add name %t% perm; Say %t% was banned for this server...
+
+On Say;Text !help ru; TargetPlayer;
+Exec admin.movePlayer %t% 2 0 true
+
+On Say;Text !help us; TargetPlayer;
+Exec admin.movePlayer %t% 1 0 true
+
+
+
+
+

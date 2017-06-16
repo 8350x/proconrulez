@@ -1,0 +1,139 @@
+#####################################################
+#  Server !rules messages
+#####################################################
+
+On Say;Text !rules
+    Say NO SG
+    Say Do not Say "fuck"
+
+On Spawn;ServerFirst;Set %kickcount[%p%]% 0
+On Spawn;ServerFirst;Set %bancount[%p%]% 0
+On Spawn;ServerFirst;Set %count% 0
+On Spawn;ServerFirst;Set %sukiyaki% 0
+On Spawn;ServerFirst;Set %syabsyab% 0
+
+On Say;Text cao ni ma
+	
+	Say fuck %p% 
+    Yell %p% is noob.
+    Say fuck %p% 
+    Yell %p% is noob.
+    Say fuck %p% 
+    Yell %p% is noob.
+    Say fuck %p% 
+    Yell %p% is noob.
+    Say fuck %p% 
+    Yell %p% is noob.
+
+    Kill 1 
+
+On Say;Text fuck
+    
+    Say fuck %p% 
+    Yell %p% is noob.
+    Say fuck %p% 
+    Yell %p% is noob.
+    Say fuck %p% 
+    Yell %p% is noob.
+    Say fuck %p% 
+    Yell %p% is noob.
+    Say fuck %p% 
+    Yell %p% is noob.
+    
+    Kill 1
+
+On Say;Text TargetPlayer; ez
+	Say %t% is noob!!!
+	
+
+On Say;Text noob
+    Say %p% is noob.
+    Say %p% is noob.
+    Say %p% is noob.
+    Say %p% is noob.
+    Say %p% is noob.
+  	Yell %p% is noob.
+
+
+On Say;Text !k
+	Kill 1
+ 
+
+On Kill; Damage Shotgun
+
+    Kill 1
+
+    PlayerSay NO SG Server
+
+On Spawn;PlayerOnce;PlayerSay NO SG Server !!!!!!
+On Spawn;PlayerOnce;PlayerSay Say "!help", you can see help 
+On Spawn;PlayerOnce;PlayerSay TEAMSPEAK IP: 8350x.net PW: welcome
+On Spawn;PlayerOnce;PlayerSay Do not resist admin !! If you say "fuck admin" you will be...
+
+On Spawn;PlayerOnce;PlayerYell NO SG. Do not say "fuck admin".
+
+On Say;Text syab
+	Say syabsyab is very delicious food !
+	Yell syabsyab is very delicious !!
+
+On Say;Text !which;  
+	Say vote your favorite food !!!
+	Say 1 syabsyab
+	Say 2 sukiyaki
+	Set %count% 1
+
+
+On Say; Text 1;
+	Say %p% voted syabsyab !! 
+	Incr %syabsyab%
+	Say [%syabsyab% vs %sukiyaki%]
+
+On Say; Text 2;
+	Say %p% voted sukiyaki !!
+	Incr %sukiyaki%
+	Say [%syabsyab% vs %sukiyaki%]
+
+On Kill; Weapon U_Claymore;
+	Say %v% is noob ??? %v% was kill by booby trup !!
+	Yell %v% is noooooooooob !!!!
+
+On Kill; Weapon U_C4,U_C4_Support,dlSHTR,EODBot,U_Repairtool,RoadKill,DamageArea,SoldierCollision;
+    Say %v% is noob ???
+    Yell %v% is nooooooooooob !!!
+
+On Kill; Weapon U_Defib;
+	Say %v% is noob ??? %v% was kill by AED !!! 
+	Yell %v% is noooooooooob !!!!
+
+On Kill; Damage U_Knife;
+    Say %v% is noob ???
+    Yell %v% is nooooooooooob !!!
+
+On kill; Weapon Melee
+    Say %v% is noob 
+    Say %v% was kill by knife lol
+    Yell %v% is noooooooooooooooooob !!! 
+
+On Say;Text sine
+	Say sine cosine tangent ??
+	Say Lets study math !!
+	Yell sine cosine tangent
+
+
+On Say;Text !deathnote; TargetPlayer;
+Exec admin.killPlayer %t%
+
+On Say;Text !votekick; TargetPlayer;If %kickcount[%t%]% != 3; Incr %kickcount[%t%]%; Say %kickcount[%t%]% players want to kick %t%. 
+
+On Say;Text !votekick; TargetPlayer;If %kickcount[%t%]% == 3; Exec admin.kickPlayer %t%
+
+On Say;Text !voteban; TargetPlayer;If %bancount[%t%]% != 3; Incr %bancount[%t%]%; Say %bancount[%t%]% players want to ban %t%. 
+
+On Say;Text !voteban; TargetPlayer;If %bancount[%t%]% == 3; Exec banList.add name %t% perm
+
+On Say;Text !help ru; TargetPlayer;
+Exec admin.movePlayer %t% 2 0 true
+
+On Say;Text !help us; TargetPlayer;
+Exec admin.movePlayer %t% 1 0 true
+
